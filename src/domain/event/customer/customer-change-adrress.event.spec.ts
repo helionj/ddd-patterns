@@ -1,4 +1,4 @@
-import EventDispatcher from "../event-dispatcher";
+import EventDispatcher from "../@shared/event-dispatcher";
 import CustomerChangeAddressEvent from "./customer-change-address.event";
 import SendConsoleLogHandler from "./handler/send-console-log-handle";
 
