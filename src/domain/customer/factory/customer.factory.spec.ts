@@ -9,7 +9,7 @@ describe("Customer Factory unit tests", () => {
 
     expect(customer.id).toBeDefined();
     expect(customer.name).toBe("Customer");
-    expect(customer.Address).toBeUndefined();
+    expect(customer.address).toBeUndefined();
   });
 
   it("should create a customer with Address", () => {
@@ -19,6 +19,6 @@ describe("Customer Factory unit tests", () => {
 
     expect(customer.id).toBeDefined();
     expect(customer.name).toEqual("Customer");
-    expect(customer.Address).toEqual(address);
+    expect(customer.address).toEqual(address);
   })
 })

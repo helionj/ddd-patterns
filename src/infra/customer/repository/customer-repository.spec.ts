@@ -28,7 +28,7 @@ describe("Customer Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address=address;
+    customer.changeAddress(address);
     customer.activate();
     customerRepository.create(customer);
     
@@ -36,10 +36,10 @@ describe("Customer Repository tests", () => {
     expect(customerModel.toJSON()).toStrictEqual({
       id: "1",
       name: customer.name,
-      street: customer.Address.street,
-      number: customer.Address.number,
-      city: customer.Address.city,
-      zipcode: customer.Address.zip,
+      street: customer.address.street,
+      number: customer.address.number,
+      city: customer.address.city,
+      zipcode: customer.address.zip,
       active: true,
       rewardPoints: 0
     });
@@ -50,7 +50,7 @@ describe("Customer Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address=address;
+    customer.changeAddress(address);
     customer.activate();
     customerRepository.create(customer);
     customer.changeName("Paul Bull");
@@ -63,10 +63,10 @@ describe("Customer Repository tests", () => {
     expect(productModel.toJSON()).toStrictEqual({
       id: customer.id,
       name: "Paul Bull",
-      street: customer.Address.street,
-      number: customer.Address.number,
-      city: customer.Address.city,
-      zipcode: customer.Address.zip,
+      street: customer.address.street,
+      number: customer.address.number,
+      city: customer.address.city,
+      zipcode: customer.address.zip,
       active: true,
       rewardPoints: 10,
 
@@ -78,7 +78,7 @@ describe("Customer Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address=address;
+    customer.changeAddress(address);
     customer.activate();
     customerRepository.create(customer);
     
@@ -88,10 +88,10 @@ describe("Customer Repository tests", () => {
     expect(customerModel.toJSON()).toStrictEqual({
       id: result.id,
       name: result.name,
-      street: result.Address.street,
-      number: result.Address.number,
-      city: result.Address.city,
-      zipcode: result.Address.zip,
+      street: result.address.street,
+      number: result.address.number,
+      city: result.address.city,
+      zipcode: result.address.zip,
       active: result.active,
       rewardPoints: result.rewardPoints,
     });
@@ -102,13 +102,13 @@ describe("Customer Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address=address;
+    customer.changeAddress(address);
     customer.activate();
     customerRepository.create(customer);
     
     const address2 = new Address("Street G",18, "Golden Lake", "99010010")
     const customer2 = new Customer("2", "Robert")
-    customer2.Address=address2;
+    customer2.changeAddress(address2);
     customer2.activate();
     customerRepository.create(customer2);
   

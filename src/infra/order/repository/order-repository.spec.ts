@@ -45,7 +45,7 @@ describe("Order Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address = address;
+    customer.changeAddress(address);
     customer.activate();
     await customerRepository.create(customer);
     
@@ -86,7 +86,7 @@ describe("Order Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address = address;
+    customer.changeAddress(address);
     customer.activate();
     await customerRepository.create(customer);
     
@@ -151,7 +151,7 @@ describe("Order Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address = address;
+    customer.changeAddress(address);
     customer.activate();
     await customerRepository.create(customer);
     
@@ -174,7 +174,7 @@ describe("Order Repository tests", () => {
     const customerRepository = new CustomerRepository();
     const address = new Address("Main Street",78, "New Lake", "79010010")
     const customer = new Customer("1", "Paul")
-    customer.Address = address;
+    customer.changeAddress(address);
     customer.activate();
     await customerRepository.create(customer);
     

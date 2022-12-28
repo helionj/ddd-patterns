@@ -62,7 +62,7 @@ export default class Customer {
   public set rewardPoints(points: number) {
     this._rewardPoints = points;
   }
-  public get Address() {
+  public get address() {
     return this._address
   }
  

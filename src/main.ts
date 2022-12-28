@@ -5,7 +5,7 @@ import OrderItem from "./domain/checkout/entity/OrderItem/order-item";
 
 let customer = new Customer("123", "Paulo Pereira Porto");
 const address = new Address("Rua Aroeira", 56, "Campo Grande", "79010-010");
-customer.Address = address;
+customer.changeAddress(address);
 customer.activate;
 
 const item1 = new OrderItem("1", "Tablet Samsung 4 Pro", 765.90, 1, "p1");
